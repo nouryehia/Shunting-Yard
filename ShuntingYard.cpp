@@ -39,7 +39,7 @@ void printPostfixFromTree(trNode*);
 int main(){
 
 	char expression[80];
-	char yesno[4];
+	char yesno[80];
 
 	//Prompt user for expression.
 	cout << endl << "Enter a mathematical expression in infix notation." << endl
@@ -64,19 +64,19 @@ int main(){
 	printPostfix(PF);
 
 	cout << endl << "Would you like to print your expression in prefix, infix, and postfix notation?" << endl << endl;
-	cin.getline(yesno, 4);
+	cin.getline(yesno, 80);
 
 	while (strcmp(yesno, "Y") != 0 && strcmp(yesno, "y") != 0 && strcmp(yesno, "N") != 0 && strcmp(yesno, "n") != 0 && 
 		   strcmp(yesno, "Yes") != 0 && strcmp(yesno, "yes") != 0 && strcmp(yesno, "No") != 0 && strcmp(yesno, "no")!= 0 &&
 		   strcmp(yesno, "YES") != 0 && strcmp(yesno, "NO") != 0){
 		cout << endl << "Enter 'Y' for yes and 'N' for no." << endl << endl;
-		cin.getline(yesno, 4);
+		cin.getline(yesno, 80);
 	}
 
 	while (strcmp(yesno, "Y") != 0 && strcmp(yesno, "y") != 0 && strcmp(yesno, "Yes") != 0 
 		   && strcmp(yesno, "yes") != 0 && strcmp(yesno, "YES") != 0){
 		cout << endl << "I did not spend all this time on this project for you to say no. Try again!" << endl << endl;
-		cin.getline(yesno, 4);
+		cin.getline(yesno, 80);
 	}
 
 	trNode* BT = binaryTree(PF);
